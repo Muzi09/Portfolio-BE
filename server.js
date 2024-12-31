@@ -22,6 +22,11 @@ mongoose
 // Routes
 app.use("/api/contact", contactFormRoute);
 
+// Simple GET API to say hello
+app.get("/hello", (req, res) => {
+  res.status(200).send("Hello, welcome to our API!");
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
